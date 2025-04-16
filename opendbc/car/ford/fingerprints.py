@@ -95,34 +95,40 @@ FW_VERSIONS = {
       b'RJ6T-14H102-ACJ\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
   },
-    CAR.MOCK: {
+  CAR.MOCK: {
     (Ecu.eps, 0x730, None): [
-      b'ML3V-14D003-BA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'ML3V-14D003-BA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',   # EPS firmware from logs
+      b'ML3V-14D003-BC\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',   # existing entry
     ],
     (Ecu.abs, 0x760, None): [
-      b'ML34-2D053-AJ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'ML34-2D053-AJ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # ABS firmware from logs
+      b'NL34-2D053-CA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # existing (2022+ variant)
+      b'PL34-2D053-CA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # existing (2023 variant)
+      b'PL34-2D053-CC\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # existing (another 2023 variant)
+      b'PL3V-2D053-BB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # ABS variant for hybrid models
     ],
     (Ecu.fwdRadar, 0x764, None): [
-      b'ML3T-14D049-AH\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'ML3T-14D049-AH\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',   # radar firmware from logs
+      b'ML3T-14D049-AL\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',   # existing entry
     ],
     (Ecu.fwdCamera, 0x706, None): [
-      b'ML3T-14H102-ACA\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-  },
-  CAR.FORD_F_150_LIGHTNING_MK1: {
-    (Ecu.abs, 0x760, None): [
-      b'PL38-2D053-AA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-      b'RL38-2D053-BD\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-    ],
-    (Ecu.fwdCamera, 0x706, None): [
+      b'ML3T-14H102-ACA\x00\x00\x00\x00\x00\x00\x00\x00\x00',      # camera firmware from logs
+      b'ML3T-14H102-ABR\x00\x00\x00\x00\x00\x00\x00\x00\x00',      # existing entries...
       b'ML3T-14H102-ABT\x00\x00\x00\x00\x00\x00\x00\x00\x00',
-      b'RJ6T-14H102-BBC\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'PJ6T-14H102-ABJ\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+      b'RJ6T-14H102-ACJ\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
-    (Ecu.fwdRadar, 0x764, None): [
-      b'ML3T-14D049-AL\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    (Ecu.engine, 0x7E0, None): [
+      b'ML3A-14C204-LUH\x00\x00\x00\x00\x00\x00\x00\x00\x00',      # engine PCM firmware from logs (3.5L EcoBoost)
+      b'PL3A-14C204-BRB\x00\x00\x00\x00\x00\x00\x00\x00\x00',      # additional engine firmware (seen on 2023 models)
     ],
-    (Ecu.eps, 0x730, None): [
-      b'RL38-14D003-AA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    (Ecu.shiftByWire, 0x732, None): [
+      b'ML3P-7P470-AJ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # shifter firmware from logs
+      b'ML3P-7P470-AL\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',  # newer shifter firmware (2022–23)
+    ],
+    (Ecu.debug, 0x7D0, None): [
+      b'MU5T-14G676-CA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',   # APIM/Sync module firmware from logs
+      b'MU5T-14G676-CB\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',   # updated Sync module firmware (seen in 2021–22)
     ],
   },
   CAR.FORD_MUSTANG_MACH_E_MK1: {
