@@ -162,7 +162,10 @@ class CAR(Platforms):
     [FordCarDocs("Ford Ranger 2024", "Adaptive Cruise Control with Lane Centering")],
     CarSpecs(mass=2000, wheelbase=3.27, steerRatio=17.0),
   )
-
+  MOCK = FordCANFDPlatformConfig(
+    [FordCarDocs("Ford F-150 2021-23", "Co-Pilot360 Assist 2.0", hybrid=False)],
+    CarSpecs(mass=1836.0, wheelbase=2.700000047683716, steerRatio=13.0),
+  )
 
 # FW response contains a combined software and part number
 # A-Z except no I, O or W

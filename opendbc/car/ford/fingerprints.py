@@ -95,6 +95,20 @@ FW_VERSIONS = {
       b'RJ6T-14H102-ACJ\x00\x00\x00\x00\x00\x00\x00\x00\x00',
     ],
   },
+    CAR.MOCK: {
+    (Ecu.eps, 0x730, None): [
+      b'ML3V-14D003-BA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+    (Ecu.abs, 0x760, None): [
+      b'ML34-2D053-AJ\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+    (Ecu.fwdRadar, 0x764, None): [
+      b'ML3T-14D049-AH\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+    (Ecu.fwdCamera, 0x706, None): [
+      b'ML3T-14H102-ACA\x00\x00\x00\x00\x00\x00\x00\x00\x00',
+    ],
+  },
   CAR.FORD_F_150_LIGHTNING_MK1: {
     (Ecu.abs, 0x760, None): [
       b'PL38-2D053-AA\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00',
