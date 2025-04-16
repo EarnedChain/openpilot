@@ -164,7 +164,7 @@ class CAR(Platforms):
   )
   MOCK = FordCANFDPlatformConfig(
     [FordCarDocs("Ford F-150 2021-23", "Co-Pilot360 Assist 2.0", hybrid=False)],
-    CarSpecs(mass=1836.0, wheelbase=2.700000047683716, steerRatio=13.0),
+    CarSpecs(mass=2000, wheelbase=3.69, steerRatio=17.0),
   )
 
 # FW response contains a combined software and part number
